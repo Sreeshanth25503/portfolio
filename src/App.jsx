@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Router from './Components/Router';
@@ -12,8 +12,20 @@ import Resume from './Components/Pages/Resume';
 import Contact from './Components/Pages/Contact';
 
 const App = () => {
-  // Check if we're on a project detail page
-  const isProjectDetailPage = window.location.hash.includes('/projects/');
+  // State to track if we're on a project detail page
+  const [isProjectDetailPage, setIsProjectDetailPage] = useState(
+    window.location.hash.includes('/projects/')
+  );
+
+  // Listen for hash changes to update the view
+  useEffect(() => {
+    const handleHashChange = () => {
+      setIsProjectDetailPage(window.location.hash.includes('/projects/'));
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
