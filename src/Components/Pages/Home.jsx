@@ -3,13 +3,8 @@ import React from 'react';
 const Home = () => (
   <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100">
     <div className="max-w-4xl w-full text-center">
-      {/* Identity line - subtle, above main headline */}
-      <p className="text-lg sm:text-xl text-gray-600 mb-4 font-medium">
-        Hi, I'm Sreeshanth P
-      </p>
-      
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-gray-900 mb-6 animate-fade-in leading-tight">
-        Hello, World.
+        Hi, I'm Sreeshanth P
       </h1>
       
       {/* Tightened tagline - more concrete */}
