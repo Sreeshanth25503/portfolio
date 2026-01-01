@@ -7,7 +7,7 @@ const Home = () => (
         Hello, World.
       </h1>
       <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-        I'm Sreeshanth P, an MCA student and Python developer passionate about building intelligent solutions and exploring the intersection of AI and web development.
+        Focused on building real software and getting better every day.
       </p>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         <a 
