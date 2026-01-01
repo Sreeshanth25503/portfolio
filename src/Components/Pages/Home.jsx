@@ -1,7 +1,8 @@
 import React from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const Home = () => (
-  <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+  <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100 relative">
     <div className="max-w-4xl w-full text-center">
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-gray-900 mb-6 animate-fade-in leading-tight">
         Hi, I am<br />
@@ -9,12 +10,12 @@ const Home = () => (
       </h1>
       
       {/* Tightened tagline - more concrete */}
-      <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
         Focused on building real software through hands-on projects.
       </p>
       
       {/* Clear primary/secondary button hierarchy */}
-      <div className="mt-12 flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {/* Primary button - solid, guides to work */}
         <a 
           href="#projects" 
@@ -31,6 +32,19 @@ const Home = () => (
           Get In Touch
         </a>
       </div>
+      
+      {/* Credibility hint - subtle skills indicator */}
+      <p className="text-sm text-gray-500 font-medium">
+        Python • React • AI Projects
+      </p>
+    </div>
+    
+    {/* Scroll indicator - animated down arrow */}
+    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-gray-600 transition-colors">
+        <span className="text-xs mb-1">Scroll</span>
+        <ChevronDown className="w-6 h-6" />
+      </a>
     </div>
   </section>
 );
