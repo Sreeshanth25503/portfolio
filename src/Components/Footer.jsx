@@ -1,0 +1,13 @@
+import React from 'react';
+
+const Footer = () => (
+  <footer className="bg-gray-50 border-t mt-auto">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <p className="text-center text-gray-600 text-sm">
+        © 2024 Sreeshanth P. All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
+
+export default Footer;
