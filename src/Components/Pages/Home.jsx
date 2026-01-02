@@ -35,7 +35,7 @@ const Home = () => (
       
       {/* Credibility hint - subtle skills indicator */}
       <p className="text-sm text-gray-500 font-medium">
-        Python • React • AI Projects
+        Python • Web • AI
       </p>
     </div>
     
