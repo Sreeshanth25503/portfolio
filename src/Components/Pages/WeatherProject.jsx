@@ -5,36 +5,40 @@ import { Link } from '../Router';
 const WeatherProject = () => {
   const project = {
     title: 'Weather Forecast Application',
-    description: 'A responsive web application providing real-time weather information and forecasts. Features include location-based weather data, 7-day forecasts, interactive maps, and severe weather alerts with a clean, intuitive interface.',
-    fullDescription: `A comprehensive weather application that delivers accurate, real-time weather information with an emphasis on user experience and data visualization.
+    description: 'A Python-based desktop weather application with automatic location detection and real-time weather data. Features a modern UI with theme toggle and temperature unit conversion.',
+    fullDescription: `A comprehensive desktop weather application built with Python and CustomTkinter that delivers accurate, real-time weather information with an emphasis on user experience and modern design.
     
-    The application integrates with the OpenWeather API to fetch current weather conditions, hourly forecasts, and extended 7-day predictions. Users can search for any location worldwide or use automatic geolocation to get local weather data instantly.
+    The application automatically detects your location using the IPInfo API and converts coordinates into city names via Geopy's Nominatim API. It integrates with WeatherAPI to fetch current weather conditions and displays them in a clean, intuitive interface.
     
     Key features include:
-    - Real-time weather updates with automatic refresh
-    - Interactive weather maps with multiple layers
-    - Detailed 7-day forecast with hourly breakdowns
-    - Severe weather alerts and notifications
-    - Historical weather data and trends
-    - Beautiful data visualizations using Chart.js`,
-    tech: ['Python', 'Django', 'OpenWeather API', 'JavaScript', 'Chart.js', 'HTML/CSS', 'PostgreSQL'],
+    - Automatic location detection using IP address
+    - Search functionality for any city worldwide
+    - Real-time weather updates with temperature, humidity, wind speed, and UV index
+    - Toggle between Celsius and Fahrenheit
+    - Dark mode and light mode theme support
+    - Responsive UI that never freezes during data loading
+    - Background threading for smooth performance`,
+    tech: ['Python', 'CustomTkinter', 'WeatherAPI', 'IPInfo API', 'Geopy', 'Threading', 'Requests'],
     github: 'https://github.com/Sreeshanth25503/Weather-Forecast.git',
     features: [
-      'Real-time weather data for any location',
-      '7-day extended forecast with hourly details',
-      'Interactive weather maps',
-      'Severe weather alerts and warnings',
-      'Temperature, humidity, wind speed tracking',
-      'UV index and air quality information',
-      'Sunrise/sunset times',
-      'Weather data visualization with charts'
+      'Auto location detection using IP address',
+      'Search any city worldwide',
+      'Real-time weather data updates',
+      'Temperature unit conversion (°C/°F)',
+      'Dark mode and light mode themes',
+      'Current temperature and feels-like temperature',
+      'Humidity percentage tracking',
+      'Wind speed monitoring',
+      'UV index display',
+      'Clean, modern UI with CustomTkinter'
     ],
     challenges: [
-      'Handling API rate limits efficiently',
-      'Implementing accurate geolocation',
-      'Creating responsive data visualizations',
-      'Managing real-time data updates',
-      'Optimizing performance for mobile devices'
+      'Implementing smooth threading to prevent UI freezing',
+      'Accurate IP-based location detection',
+      'Converting coordinates to readable city names',
+      'Managing API calls efficiently',
+      'Creating a responsive CustomTkinter interface',
+      'Handling network errors gracefully'
     ]
   };
 

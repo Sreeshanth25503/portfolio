@@ -13,8 +13,8 @@ const Projects = () => {
     {
       id: 'weather',
       title: 'Weather Forecast Application',
-      description: 'A responsive web application providing real-time weather information and forecasts. Features include location-based weather data, 7-day forecasts, interactive maps, and severe weather alerts with a clean, intuitive interface.',
-      tech: ['Python', 'Django', 'OpenWeather API', 'JavaScript', 'Chart.js'],
+      description: 'A Python-based desktop weather application with auto location detection using IPInfo API. Features real-time weather data, temperature unit conversion, dark/light theme toggle, and a modern UI built with CustomTkinter.',
+      tech: ['Python', 'CustomTkinter', 'WeatherAPI', 'IPInfo API', 'Threading', 'Requests'],
       github: 'https://github.com/Sreeshanth25503/Weather-Forecast.git'
     }
   ];
