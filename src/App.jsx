@@ -20,12 +20,24 @@ const App = () => {
   // Listen for hash changes to update the view
   useEffect(() => {
     const handleHashChange = () => {
-      setIsProjectDetailPage(window.location.hash.includes('/projects/'));
+      const isProjectPage = window.location.hash.includes('/projects/');
+      setIsProjectDetailPage(isProjectPage);
+      
+      // Scroll to top when navigating to project detail pages
+      if (isProjectPage) {
+        window.scrollTo(0, 0);
+      }
     };
 
     window.addEventListener('hashchange', handleHashChange);
+    
+    // Also scroll to top on initial load if on project page
+    if (isProjectDetailPage) {
+      window.scrollTo(0, 0);
+    }
+    
     return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  }, [isProjectDetailPage]);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
