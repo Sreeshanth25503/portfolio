@@ -1,6 +1,5 @@
 import React from 'react';
 import { Github, ExternalLink, ArrowLeft } from 'lucide-react';
-import { Link } from '../Router';
 
 const WeatherProject = () => {
   const project = {
@@ -44,10 +43,10 @@ const WeatherProject = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <Link to="/projects" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors">
+      <a href="#projects" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors">
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to All Projects
-      </Link>
+      </a>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
         {project.title}
