@@ -14,13 +14,14 @@ import Contact from './Components/Pages/Contact';
 const App = () => {
   // State to track if we're on a project detail page
   const [isProjectDetailPage, setIsProjectDetailPage] = useState(
-    window.location.hash.includes('/projects/')
+    window.location.hash.startsWith('#/projects/')
   );
 
   // Listen for hash changes to update the view
   useEffect(() => {
     const handleHashChange = () => {
-      const isProjectPage = window.location.hash.includes('/projects/');
+      const hash = window.location.hash;
+      const isProjectPage = hash.startsWith('#/projects/');
       setIsProjectDetailPage(isProjectPage);
       
       // Scroll to top when navigating to project detail pages
