@@ -2,7 +2,7 @@ import React from 'react';
 import { Download, ExternalLink, GraduationCap, Code, Briefcase } from 'lucide-react';
 
 const Resume = () => {
-  const resumeUrl = 'https://drive.google.com/file/d/1CcRbd5JfkL9eZxFyndPQj4fIaElUJgWA/view';
+  const resumeUrl = 'https://drive.google.com/file/d/1ahAC5TShCq-a788Mxoe_O5uEMROOl_ta/view?usp=sharing';
   
   return (
     <section id="resume" className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20">
