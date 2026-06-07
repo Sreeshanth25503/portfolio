@@ -92,6 +92,9 @@ const Navbar = () => {
                     <Link to="/projects/weather" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" onClick={closeMenu}>
                       Weather Forecast App
                     </Link>
+                    <Link to="/projects/portfolio" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" onClick={closeMenu}>
+                      Portfolio Website
+                    </Link>
                   </div>
                 </div>
               )}
@@ -149,6 +152,9 @@ const Navbar = () => {
                   </Link>
                   <Link to="/projects/weather" className="block py-2 text-gray-600 hover:text-gray-900" onClick={closeMenu}>
                     Weather Forecast App
+                  </Link>
+                  <Link to="/projects/portfolio" className="block py-2 text-gray-600 hover:text-gray-900" onClick={closeMenu}>
+                    Portfolio Website
                   </Link>
                 </div>
               )}

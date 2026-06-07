@@ -8,6 +8,7 @@ import About from './Components/Pages/About';
 import Projects from './Components/Pages/Projects';
 import TextToVideoProject from './Components/Pages/TextToVideoProject';
 import WeatherProject from './Components/Pages/WeatherProject';
+import PortfolioProject from './Components/Pages/PortfolioProject';
 import Resume from './Components/Pages/Resume';
 import Contact from './Components/Pages/Contact';
 
@@ -53,6 +54,9 @@ const App = () => {
             </Route>
             <Route path="/projects/weather">
               <WeatherProject />
+            </Route>
+            <Route path="/projects/portfolio">
+              <PortfolioProject />
             </Route>
           </Router>
         </main>

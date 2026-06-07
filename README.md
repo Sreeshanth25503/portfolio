@@ -1,6 +1,10 @@
-# Sreeshanth P - Portfolio Website
+# Sreeshanth P — Portfolio Website
 
-A modern, responsive portfolio website built with React and Tailwind CSS.
+A modern, fully responsive personal portfolio website built with **React 18** and **Tailwind CSS**. Features custom hash-based client-side routing, scroll-spy navigation, and dedicated project detail pages.
+
+🔗 **Live Site:** [portfolio-sreeshanth25503.vercel.app](https://portfolio-sreeshanth25503.vercel.app)
+
+---
 
 ## 🚀 Quick Start
 
@@ -10,34 +14,39 @@ A modern, responsive portfolio website built with React and Tailwind CSS.
 
 ### Installation
 
-1. Clone the repository
 ```bash
-git clone <your-repo-url>
+# 1. Clone the repository
+git clone https://github.com/Sreeshanth25503/portfolio.git
 cd portfolio
-```
 
-2. Install dependencies
-```bash
+# 2. Install dependencies
 npm install
-```
 
-3. Start development server
-```bash
+# 3. Start development server
 npm start
 ```
 
 The app will open at `http://localhost:3000`
 
+---
+
 ## 📦 Build for Production
+
 ```bash
 npm run build
 ```
 
+---
+
 ## 🚀 Deploy to Vercel
 
+The site is connected to Vercel for automatic CI/CD.  
+Every push to the `main` branch triggers an automatic re-deployment — no manual steps needed.
+
+To set up from scratch:
 1. Push your code to GitHub
 2. Import your repository on [Vercel](https://vercel.com)
-3. Vercel will automatically detect React and deploy
+3. Vercel auto-detects React and deploys
 
 Or use Vercel CLI:
 ```bash
@@ -45,39 +54,58 @@ npm install -g vercel
 vercel
 ```
 
-## 🎨 Customization
-
-### Update Personal Information
-
-1. **Contact Details** - Edit `src/components/pages/Contact.jsx`
-2. **Projects** - Edit `src/components/pages/Projects.jsx`
-3. **Resume** - Edit `src/components/pages/Resume.jsx` and update the iframe src
-4. **About** - Edit `src/components/pages/About.jsx`
-
-### Update Resume
-
-Replace the iframe src in `Resume.jsx` with your Google Docs published link:
-1. Open your Google Doc
-2. File → Share → Publish to web
-3. Copy the link and replace in Resume.jsx
+---
 
 ## 📱 Features
 
-- ✅ Fully responsive design
-- ✅ Multi-page navigation with hash routing
-- ✅ Mobile hamburger menu
-- ✅ Projects dropdown menu
-- ✅ Embedded resume viewer
-- ✅ Contact page with social links
-- ✅ Clean, modern UI with Tailwind CSS
-- ✅ Custom fonts (Playfair Display + Inter)
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Custom hash-based client-side routing (no React Router)
+- ✅ Scroll-spy navbar that highlights the active section
+- ✅ Projects dropdown menu with individual detail pages
+- ✅ Clickable project cards that navigate to detail pages
+- ✅ Resume viewer with Google Drive link
+- ✅ Contact section with social links
+- ✅ Mobile hamburger menu with accordion Projects sub-menu
+- ✅ Automatic Vercel deployment on every GitHub push
+
+---
+
+## 📂 Projects Showcased
+
+| Project | Route | GitHub |
+|---|---|---|
+| Text-to-Video Generator | `/projects/text-to-video` | [Repo](https://github.com/Sreeshanth25503/Text---Video-Generator.git) |
+| Weather Forecast App | `/projects/weather` | [Repo](https://github.com/Sreeshanth25503/Weather-Forecast.git) |
+| Portfolio Website | `/projects/portfolio` | [Repo](https://github.com/Sreeshanth25503/portfolio.git) |
+
+---
+
+## 🎨 Customisation
+
+| What to change | File to edit |
+|---|---|
+| Personal info / bio | `src/Components/Pages/About.jsx` |
+| Projects list | `src/Components/Pages/Projects.jsx` |
+| Project detail pages | `src/Components/Pages/*Project.jsx` |
+| Resume link | `src/Components/Pages/Resume.jsx` (update `resumeUrl`) |
+| Contact / social links | `src/Components/Pages/Contact.jsx` |
+| Nav links | `src/Components/Navbar.jsx` |
+| Routing | `src/App.jsx` + `src/Components/Router.jsx` |
+
+---
 
 ## 🛠️ Tech Stack
 
-- React 18
-- Tailwind CSS
-- Lucide React (icons)
-- Hash-based routing
+| Technology | Purpose |
+|---|---|
+| React 18 | UI framework |
+| Tailwind CSS | Utility-first styling |
+| Lucide React | Icon library |
+| Custom hash router | Client-side navigation |
+| Vercel | Hosting & CI/CD |
+| GitHub | Version control |
+
+---
 
 ## 📄 License
 
