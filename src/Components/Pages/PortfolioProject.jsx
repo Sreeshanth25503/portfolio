@@ -17,7 +17,7 @@ const PortfolioProject = () => {
     - Deployed on Vercel with automatic CI/CD triggered on every GitHub push`,
     tech: ['React 18', 'Tailwind CSS', 'Lucide React', 'Hash Routing', 'Vercel', 'GitHub'],
     github: 'https://github.com/Sreeshanth25503/portfolio.git',
-    live: 'https://portfolio-sreeshanth25503.vercel.app',
+    live: null, // TODO: update with your real Vercel URL once deployed
     features: [
       'Fully responsive design — mobile, tablet, desktop',
       'Custom hash-based client-side routing (no React Router)',
@@ -37,12 +37,20 @@ const PortfolioProject = () => {
     ],
   };
 
+  const goBackToProjects = () => {
+    window.location.hash = '';
+    setTimeout(() => {
+      const el = document.getElementById('projects');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <a href="#projects" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors">
+      <button onClick={goBackToProjects} className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors cursor-pointer">
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to All Projects
-      </a>
+      </button>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
         {project.title}
