@@ -4,11 +4,12 @@ import { Github, ExternalLink, ArrowLeft } from 'lucide-react';
 const WeatherProject = () => {
   const project = {
     title: 'Weather Forecast Application',
-    description: 'A Python-based desktop weather application with automatic location detection and real-time weather data. Features a modern UI with theme toggle and temperature unit conversion.',
+    description:
+      'A Python-based desktop weather application with automatic location detection and real-time weather data. Features a modern UI with theme toggle and temperature unit conversion.',
     fullDescription: `A comprehensive desktop weather application built with Python and CustomTkinter that delivers accurate, real-time weather information with an emphasis on user experience and modern design.
-    
+
     The application automatically detects your location using the IPInfo API and converts coordinates into city names via Geopy's Nominatim API. It integrates with WeatherAPI to fetch current weather conditions and displays them in a clean, intuitive interface.
-    
+
     Key features include:
     - Automatic location detection using IP address
     - Search functionality for any city worldwide
@@ -29,7 +30,7 @@ const WeatherProject = () => {
       'Humidity percentage tracking',
       'Wind speed monitoring',
       'UV index display',
-      'Clean, modern UI with CustomTkinter'
+      'Clean, modern UI with CustomTkinter',
     ],
     challenges: [
       'Implementing smooth threading to prevent UI freezing',
@@ -37,8 +38,8 @@ const WeatherProject = () => {
       'Converting coordinates to readable city names',
       'Managing API calls efficiently',
       'Creating a responsive CustomTkinter interface',
-      'Handling network errors gracefully'
-    ]
+      'Handling network errors gracefully',
+    ],
   };
 
   const goBackToProjects = () => {
@@ -49,27 +50,38 @@ const WeatherProject = () => {
     }, 100);
   };
 
+  const cardClass =
+    'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6';
+  const bulletClass = 'text-gray-900 dark:text-gray-300 mr-2';
+  const itemClass = 'text-gray-700 dark:text-gray-300';
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <button onClick={goBackToProjects} className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors cursor-pointer">
+      <button
+        onClick={goBackToProjects}
+        className="inline-flex items-center text-gray-600 dark:text-gray-400
+          hover:text-gray-900 dark:hover:text-white mb-8 transition-colors cursor-pointer"
+      >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to All Projects
       </button>
 
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-gray-900 dark:text-white mb-6">
         {project.title}
       </h1>
 
-      <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+      <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
         {project.description}
       </p>
 
       <div className="flex flex-wrap gap-4 mb-12">
-        <a 
+        <a
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors font-medium"
+          className="inline-flex items-center px-6 py-3
+            bg-gray-900 dark:bg-white text-white dark:text-gray-900
+            rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors font-medium"
         >
           <Github className="w-5 h-5 mr-2" />
           View on GitHub
@@ -77,44 +89,56 @@ const WeatherProject = () => {
         </a>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
-        <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">About This Project</h2>
-        <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+      <div className={`${cardClass} mb-8`}>
+        <h2 className="text-2xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+          About This Project
+        </h2>
+        <div className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
           {project.fullDescription}
         </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Key Features</h3>
+        <div className={cardClass}>
+          <h3 className="text-xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+            Key Features
+          </h3>
           <ul className="space-y-2">
             {project.features.map((feature, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-gray-900 mr-2">•</span>
-                <span className="text-gray-700">{feature}</span>
+                <span className={bulletClass}>•</span>
+                <span className={itemClass}>{feature}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Technical Challenges</h3>
+        <div className={cardClass}>
+          <h3 className="text-xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+            Technical Challenges
+          </h3>
           <ul className="space-y-2">
             {project.challenges.map((challenge, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-gray-900 mr-2">•</span>
-                <span className="text-gray-700">{challenge}</span>
+                <span className={bulletClass}>•</span>
+                <span className={itemClass}>{challenge}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Technology Stack</h3>
+      <div className={cardClass}>
+        <h3 className="text-xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+          Technology Stack
+        </h3>
         <div className="flex flex-wrap gap-3">
           {project.tech.map(tech => (
-            <span key={tech} className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
+            <span
+              key={tech}
+              className="px-4 py-2 bg-gray-100 dark:bg-gray-700
+                text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
+            >
               {tech}
             </span>
           ))}
