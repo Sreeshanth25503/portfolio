@@ -46,9 +46,9 @@ export const researchPapers = [
     language: 'Python',
     libraries: ['TensorFlow', 'Keras', 'Transformers', 'NumPy', 'Pandas', 'Scikit-learn'],
     metrics: [
-      { name: 'MAE', value: 'Evaluated' },
-      { name: 'MAPE', value: 'Evaluated' },
-      { name: 'RMSE', value: 'Evaluated' },
+      { name: 'MAE', value: 'Used for Emotion Intensity Evaluation' },
+      { name: 'MAPE', value: 'Used for Prediction Accuracy Assessment' },
+      { name: 'RMSE', value: 'Used for Model Error Analysis' },
     ],
     recognition: ['IEEE Published', 'Presented at IEEE CCEM 2023'],
     seo: {
